@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>{{title}} - Travlr Getaways</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			{{>header }}
+			<div id="contents">
+				<div class="box">
+					<div>
+						<div id="contact" class="body">
+							<h1>{{title}}</h1>
+							<form action="index.html" method="post">
+                                <table>
+                                    <tbody>
+										<tr>
+											<td>Name:</td>
+											<td><input type="text" value="" class="txtfield"></td>
+										</tr> <tr>
+											<td>Email:</td>
+											<td><input type="text" value="" class="txtfield"></td>
+										</tr> <tr>
+											<td>Subject:</td>
+											<td><input type="text" value="" class="txtfield"></td>
+										</tr> <tr>
+											<td class="txtarea">Message:</td>
+											<td><textarea></textarea></td>
+										</tr> <tr>
+											<td></td>
+											<td><input type="submit" value="" class="btn"></td>
+										</tr>
+									</tbody>
+                                </table>
+                            </form>
+                            <div>
+								{{#each contactData}}
+									<h2>{{this.name}}</h2>
+									<p>
+										<span>Address:</span> {{this.address}}
+									</p>
+									<p>
+										<span>Telephone Number:</span> {{this.telephone}}
+									</p>
+									<p>
+										<span>Fax Number:</span> {{this.fax}}
+									</p>
+								{{/each}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{>footer }}
+		</div>
+	</div>
+</body>
+</html>

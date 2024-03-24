@@ -13,14 +13,18 @@
 			<div id="contents">
 				<div class="box">
 					<div>
-						<div id="travel" class="body">
+						<div id="meals" class="body">
 							<h1>{{title}}</h1>
-							<ul id="sites">
-								{{#each trips}}
+							<ul id="foods">
+								{{#each mealsData}}
 									<li>
-										<a href="/travel"><img src="images/{{this.image}}" alt="Img" /></a>
-										<h2><a href="/travel">{{this.name}}</a></h2>
-										{{{this.description}}}
+										<h2><a href="{{this.url}}">{{this.name}}</a></h2>
+										<div class="infos">
+											<a href="{{this.url}}"><img src="images/{{this.image}}" alt="Img" height="169" width="780" /><span class="cover"></span></a>
+											<p>
+												{{{this.description}}}
+											</p>
+										</div>
 									</li>
 								{{/each}}
 							</ul>

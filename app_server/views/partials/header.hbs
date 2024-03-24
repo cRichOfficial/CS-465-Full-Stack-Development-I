@@ -4,26 +4,60 @@
     </div>
     <div id="navigation">
         <ul>
-            <li>
-                <a href="index.html">Home</a>
+            {{#if homeActive}}
+                <li class="selected">
+            {{else}}
+                <li>
+            {{/if}}
+                <a href="/">Home</a>
             </li>
-            <li class="selected">
+            
+            {{#if travelActive}}
+                <li class="selected">
+            {{else}}
+                <li>
+            {{/if}}
                 <a href="/travel">Travel</a>
             </li>
-            <li>
-                <a href="rooms.html">Rooms</a>
+            
+            {{#if roomsActive}}
+                <li class="selected">
+            {{else}}
+                <li>
+            {{/if}}
+                <a href="/rooms">Rooms</a>
             </li>
-            <li>
-                <a href="meals.html">Meals</a>
+
+            {{#if mealsActive}}
+                <li class="selected">
+            {{else}}
+                <li>
+            {{/if}}
+                <a href="/meals">Meals</a>
             </li>
-            <li>
-                <a href="news.html">News</a>
+
+            {{#if newsActive}}
+                <li class="selected">
+            {{else}}
+                <li>
+            {{/if}}
+                <a href="/news">News</a>
             </li>
-            <li>
-                <a href="about.html">About</a>
+
+            {{#if aboutActive}}
+                <li class="selected">
+            {{else}}
+                <li>
+            {{/if}}
+                <a href="/about">About</a>
             </li>
-            <li>
-                <a href="contact.html">Contact</a>
+
+            {{#if contactActive}}
+                <li class="selected">
+            {{else}}
+                <li>
+            {{/if}}
+                <a href="/contact">Contact</a>
             </li>
         </ul>
     </div>
